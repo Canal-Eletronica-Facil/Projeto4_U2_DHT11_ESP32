@@ -1,8 +1,8 @@
 //... Livro IoT na Prática - PROGRAMA 4 - Monitoramento do sensor DHT11 ...//
 
 #include "DHT.h"
-#define DHTTYPE DHT11   // DHT 11
-#define DHTPIN A1
+#define DHTTYPE DHT11                   // Tipo do Sensor utilizado (DHT11 ou DHT22)
+#define DHTPIN 33                       // Número do GPIO em que o DHT11 está conectado
 DHT SENSOR_DHT11(DHTPIN, DHTTYPE);
 
 //............. BLOCO 1 - NOMEAR PINOS USADOS NO PROJETO .............//
@@ -10,12 +10,12 @@ DHT SENSOR_DHT11(DHTPIN, DHTTYPE);
 float umidade_ar = 0;
 float temperatura = 0;
 
-int LED1 = 6;         
-int LED2 = 7;         
-int LED3 = 8;         
-int LED4 = 9;        
-int LED5 = 10;       
-int LED6 = 11;   
+int LED1 = 25;     // Seleciona o nome LED1 o GPIO 25 do ESP32
+int LED2 = 26;     // Seleciona o nome LED2 o GPIO 26 do ESP32    
+int LED3 = 27;     // Seleciona o nome LED3 o GPIO 27 do ESP32    
+int LED4 = 14;     // Seleciona o nome LED4 o GPIO 14 do ESP32   
+int LED5 = 12;     // Seleciona o nome LED5 o GPIO 12 do ESP32  
+int LED6 = 13;     // Seleciona o nome LED6 o GPIO 13 do ESP32
                     
 //............. BLOCO 2 - CONFIGURAR PINOS USADOS NO PROJETO .............//
 void setup() 
